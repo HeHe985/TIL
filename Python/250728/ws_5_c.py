@@ -4,7 +4,7 @@ word = '1ㄴ2ㄹ3ㅓ4ㅅ5'
 arr = []
 
 # original_word 문자열을 모두 나눠 arr 리스트에 추가
-arr.extend(list(original_word))
+arr.extend(original_word)
 print(arr)
 
 # 문장에서 잘못된 내용을 제거하는 함수
