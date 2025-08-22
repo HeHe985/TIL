@@ -1,3 +1,6 @@
+# 하나를 고르고, 남은 목록에서 고르는 경우의 수
+
+
 def perm(selected, remaining):
     """
     Args:
