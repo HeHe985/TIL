@@ -11,7 +11,7 @@ for tc in range(1, T + 1):
     if N % 2 == 1:
         num_harf = N // 2 + 1
     else:
-        num_harf = N// 2
+        num_harf = N // 2
 
     deck1 = arr[:num_harf]
     deck2 = arr[num_harf:]
@@ -19,7 +19,4 @@ for tc in range(1, T + 1):
     print(deck1, deck2)
     
 
-
-
-
-    print(f'#{tc} {result}')
+    # print(f'#{tc} {result}')
