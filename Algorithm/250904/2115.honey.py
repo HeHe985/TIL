@@ -6,9 +6,39 @@ sys.stdin = open('2115.txt')
 N: 벌통의 크기
 M: 선택할 수 있는 벌통의 개수
 C: 꿀을 채취할 수 있는 최대 양
-arr: 각 벌통에서 채취할 수 있는 꿀의 양
+info: 각 벌통에서 채취할 수 있는 꿀의 양
 '''
 
+
+# 벌꿀통 선택하기
+def select_position(cnt, idx):
+    # 기저조건: cnt == 2
+    if cnt == 2:
+        # Todo: 빠져나갈 시 처리 구현
+        return
+    for i in range(N):
+        for j in range(N):
+
+
+
+
+T = int(input())
+
+# for TC: 테스트 케이스 반복문
+for tc in range(1, T + 1):
+    N, M, C = map(int, input().split())
+    info = [list(map(int, input().split())) for _ in range(N)]
+
+
+
+    # print(f'#{tc} {result}')
+
+
+
+
+
+
+'''
 T = int(input())
 
 # for TC: 테스트 케이스 반복문
@@ -39,3 +69,4 @@ for tc in range(1, T + 1):
         max_honey = max(max_honey, sum_honey)
 
     print(f'#{tc} {max_honey}')
+    '''
