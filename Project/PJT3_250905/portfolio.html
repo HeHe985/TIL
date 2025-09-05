@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 내비게이션 바 -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="text-center w-100">
+
+    <div class=" mb-2 bg-info py-3">
+      <a class="navbar-brand d-block w-100 text-light fw-bold" href="#">John Doe님의 프로필 페이지</a>
+    </div>
+
+    <div class="navbar-nav w-100 d-flex justify-content-center" id="navbarNav">
+      <ul class="navbar-nav border-bottom border-info">
+
+        <li class="nav-item mx-5">
+          <a class="nav-link active" aria-current="page" href="editProfile.html">기본 정보 수정</a>
+        </li>
+
+        <li class="nav-item mx-5">
+          <a class="nav-link active" aria-current="page" href="portfolio.html">포트폴리오 수정</a>
+        </li>
+
+      </ul>
+    </div>  
+
+  </div>
+  </nav>
+  
+  <!-- 포트폴리오 수정 -->
+  <form class="m-5 p-5 border border-info rounded">
+    <legend class="text-center fw-bold">포트폴리오 수정</legend>
+    <div class="text-start">
+
+      <div class="mb-3">
+        <label for="membershipNumber" class="form-label">회원 번호</label>
+        <input type="number" disabled class="form-control" id="membershipNumber" value="123456789" readonly>
+      </div>
+
+      <div class="mb-3">
+        <label for="memberID" class="form-label">ID</label>
+        <input type="text" disabled class="form-control" id="memberID" value="김싸피" readonly>
+      </div>
+
+      <div class="mb-3">
+        <label for="propensityToSave" class="form-label">저축 성향</label>
+
+        <div class="d-flex justify-content-between align-items-center" id="propensityToSave">
+          <div class="btn-group-group">
+            <input type="radio" class="btn-check border" name="options" id="option1" autocomplete="off">
+            <label class="btn btn-outline-info border-info" for="option1">도전형</label>
+
+            <input type="radio" class="btn-check border border-info" name="options" id="option2" autocomplete="off">
+            <label class="btn btn-outline-info border-info" for="option2">검소형</label>
+
+            <input type="radio" class="btn-check border border-info" name="options" id="option3" autocomplete="off">
+            <label class="btn btn-outline-info border-info" for="option3">알뜰형</label>
+          </div>
+          <button class="btn bg-info text-light" type="button">Update</button>
+        </div>
+
+      </div>  
+
+      <div class="mb-3">
+        <label for="favoriteBank" class="form-label">최애 은행</label>
+        <div class="d-flex justify-content-between align-items-cente mb-3">
+          <input type="text" class="form-control" id="favoriteBank" placeholder="가장 좋아하는 은행을 입력해주세요.">
+          <button class="btn bg-info text-light" type="button">Update</button>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- d-flex justify-content-between align-items-center -->
