@@ -20,6 +20,7 @@ def move_n_connect(n, string, row, col):
         if 0 <= nx < N and 0 <= ny < N:
             move_n_connect(n + 1, string, nx, ny)
 
+
 T = int(input())
 # for TC: 테스트 케이스 반복문
 for tc in range(1, T + 1):

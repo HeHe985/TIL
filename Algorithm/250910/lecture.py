@@ -159,7 +159,7 @@ quick_sort(data_array, 0, len(data_array) - 1)
 print(f'정렬 후 : {data_array}')
 '''
 
-
+'''
 # 4. Quick Sort - Hoare Partition
 
 
@@ -205,3 +205,55 @@ data_array = [8, 3, 7, 6, 2, 5, 4]
 print(f'정렬 전: {data_array}')
 quick_sort_hoare(data_array, 0, len(data_array) - 1)
 print(f'정렬 후 : {data_array}')
+'''
+
+'''
+# 5. Binary Search - 반복문
+
+
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+
+        if arr[mid] == target:
+            return mid
+        # 타겟이 mid 값 보다 작으면 왼쪽 탐색
+        elif arr[mid] > target:
+            right = mid - 1
+        # 크면 왼쪽 탐색
+        else:
+            left = mid + 1
+
+    return -1
+
+
+numbers = [2, 4, 7, 9, 11, 19, 23]
+print(f"'11'은 인덱스 {binary_search(numbers, 11)}에 있습니다.") # '11'은 인덱스 4에 있습니다.
+print(f"'10'의 검색 결과: {binary_search(numbers, 10)}")     # '10'의 검색 결과: -1
+'''
+
+# 6. Binary Search - 재귀
+
+
+def binary_search(arr, left, right, target):
+    # 1. 탐색 범위가 더 이상 유효하지 않으면 검색 실패
+    if left > right:
+        return -1
+    # 2. mid 인덱스 계산
+    mid = (left + right) // 2
+    # 3. mid와 타깃 비교
+    if arr[mid] == target:
+        return mid
+    # 4. 왼쪽 다시 검색
+    elif arr[mid] > target:
+        binary_search(arr, left, mid - 1, target)
+    # 5. 오른쪽 다시 검색
+    else:
+        binary_search(arr, mid + 1, right, target)
+
+
+numbers = [2, 4, 7, 9, 11, 19, 23]
+result = binary_search(numbers, 0, len(numbers) - 1, 9)
+print(f"'9'는 인덱스 {result}에 있습니다.")  # '9'는 인덱스 3에 있습니다.
