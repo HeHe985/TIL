@@ -54,9 +54,9 @@ for tc in range(1, T + 1):
     # 간선 정보 리스트 생성
     edges = []
     for i in range(N):
-        for j in range(N):
+        for j in range(i + 1, N):
             edges.append((calculate_square_length(X[i], Y[i], X[j], Y[j]), i, j))
 
-    result = mst_kruskal(N, edges) * E
+    result = (mst_kruskal(N, edges)) * E
 
     print(f'#{tc} {result: .0f}')
