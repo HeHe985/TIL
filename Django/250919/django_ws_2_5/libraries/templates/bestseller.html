@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>베스트 셀러 목록</h1>
+{% for item in result %}
+    <div class="p-3 mb-2
+        {% if forloop.counter == 1 %}
+            bg-danger text-white
+        {% elif forloop.counter == 2 %}
+            bg-warning text-dark
+        {% elif forloop.counter == 3 %}
+            bg-success text-white
+        {% else %}
+            bg-light text-dark
+        {% endif %}
+    ">
+        <p class="mb-1">제목 : {{ item.title }}</p>
+        <p class="mb-1">저자 : {{ item.author }}</p>
+        <p class="mb-1">설명 : {{ item.bestDuration }}</p>
+    </div>
+{% endfor %}
+{% endblock content %}
