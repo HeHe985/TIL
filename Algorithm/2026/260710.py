@@ -1,31 +1,26 @@
 '''
 프로그래머스
-코딩테스트 연습 Summer/Winter Coding(~2018) 방문 길이
-https://school.programmers.co.kr/learn/courses/30/lessons/49994?language=python3
+코딩테스트 연습 스택/큐 올바른 괄호
+https://school.programmers.co.kr/learn/courses/30/lessons/12909
 '''
 
-directions = {
-    "U": (0, 1),
-    "D": (0, -1),
-    "R": (1, 0),
-    "L": (-1, 0)
-}
-
-def solution(dirs):
-    x, y = 0, 0
+def solution(s):
+    answer = True
     
-    visited = set()
-    answer = 0
+    stack = []
     
-    for d in dirs:
-        nx, ny = x + directions[d][0], y + directions[d][1]
-        if not (-5 <= nx <= 5 and -5 <= ny <= 5):
-            continue
+    for i in s:
+        if i == "(":
+            stack.append(i)
+        elif len(stack) != 0:
+            prev = stack.pop()
+        else:
+            stack.append(i)
+            break
             
-        if (x, y, nx, ny) not in visited:
-            visited.add((x, y, nx, ny))
-            visited.add((nx, ny, x, y))
-            answer += 1
-        x, y = nx, ny
-            
+    len_stack = len(stack)
+    
+    if len_stack != 0:
+        answer = False
+    
     return answer
