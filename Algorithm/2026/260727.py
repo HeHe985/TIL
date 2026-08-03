@@ -1,7 +1,7 @@
 '''
 프로그래머스
 코딩테스트 연습 연습문제 점 찍기
-도움말https://school.programmers.co.kr/learn/courses/30/lessons/140107
+https://school.programmers.co.kr/learn/courses/30/lessons/140107
 '''
 
 def solution(k, d):
