@@ -4,7 +4,6 @@
 https://jungol.co.kr/problem/1244
 '''
 
-
 text = ""
 
 for _ in range(4):
